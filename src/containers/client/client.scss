@@ -1,0 +1,224 @@
+@import '../../style/_colors';
+@import '../../style/_common';
+
+
+table {
+    td {
+        div {
+            svg {
+                margin-right: 10px;
+                cursor: pointer;
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+.MuiFormControl-root {
+  
+    div {
+        height: 100%;
+        input {
+            font-size: 12px;
+            height: 100%;
+        }
+    }
+    label {
+        font-size: 12px;
+        transform: none;
+        line-height: 16px;
+        padding: 10px;
+    }
+    textarea {
+        border: 1px solid rgba(25, 25, 25, 0.32);
+        padding: 10px;
+        font-size: 12px;
+    }
+
+}
+.MuiInputLabel-outlined.MuiInputLabel-shrink {
+    transform: translate(10px, -10px) scale(0.75)!important;
+}
+.main-info {
+    display: flex;
+    h2 {
+        padding-left: 10px;
+        font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+
+color: #3D5170;
+    }
+   
+}
+.header-menu {
+    @include flexbox(space-between, center);
+    background-color: $white;
+    margin-bottom: 20px;
+    height: 75px;
+    padding: 0 65px;
+   
+}
+.main-info--left {
+    width: 50%;
+}
+.main-info--right {
+    width: 50%;
+}
+.form-control-edit {
+      color: rgba(0, 0, 0, 0.87);
+      opacity: .6;
+      font-size: 12px;
+     width: 50%;
+      padding: 0 10px!important;
+      height: 35px;
+    //   &:last-child {
+    //     width: 100%;
+    //   }
+}
+.first {
+    width: 100%;
+}
+.edit-from--wrapper {
+    padding: 5px 0;
+    width: 100%;
+}
+.header {
+    @include flexbox(flex-start, center);
+    background-color: $white;
+   
+    height: 100%;
+
+  
+    p {
+        font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+/* identical to box height */
+
+letter-spacing: 0.15px;
+
+color: #3D5170;
+    }
+    svg {
+       display: none;
+    }
+}
+.form-filter {
+    padding: 10px;
+}
+.MuiTableCell-head {
+    color: #666666!important;
+    
+}
+.MuiTableCell-stickyHeader {
+    background-color: $white!important;
+}
+.MuiTableCell-root {
+    padding: 11px!important;
+}
+.MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    opacity: 0.38; 
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.wrapper {
+    padding: 30px 65px;
+}
+.add-paper {
+    max-width: 530px;
+    width: 100%;
+    position: absolute;
+    background-color: $white;
+    padding: 20px;
+    h2 {
+        padding-left: 10px;
+    }
+}
+.add-paper--header {
+    @include flexbox(space-between);
+    svg {
+        cursor: pointer;
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .wrapper {
+        padding: 15px;
+    }
+    .form-filter {
+        @include flexbox(flex-start, flex-start, column);
+        div.MuiFormControl-root {
+            width: 100%;
+            padding: 0;
+            margin: 5px 0;
+           
+        }
+        .makeStyles-textFieldIcon-35 {
+            @include flexbox(flex-end);
+        }
+    }
+    .header-menu {
+        padding: 0 15px;
+    }
+   .main-info--left {
+       width: 100%;
+   }
+   .main-info--right {
+       width: 100%;
+   }
+   .main-info {
+       flex-direction: column;
+   }
+  .form-control-edit {
+      width: 100%;
+      margin: 5px 0!important;
+      .MuiFormControl-root  {
+        margin: 5px 0;
+      }
+  }
+  .edit-from--wrapper {
+      padding: 0;
+      textarea {
+        margin-top: 10px!important;
+    }
+  }
+  .header {
+      svg {
+          display: block;
+          margin-right: 10px;
+      }
+     
+  }
+  
+}
+.save-btn {
+    width: 40%;
+    padding: 16px 0;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 440px) {
+    .header {
+        p {
+            font-size: 16px;
+        }
+    }
+   .save-btn {
+       width: 50%;
+       padding: 10px!important;
+       font-size: 12px!important;
+       
+   }
+}   

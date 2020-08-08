@@ -1,0 +1,32 @@
+@import '../../style/_colors';
+@import '../../style/_common';
+
+.signin-inner {
+   @include flexbox(flex-start, center, column);
+   height: 100%;   
+}
+.signin-form {
+    margin-top: 120px;
+    background-color: $white;
+    width: 400px;
+    height: 400px;  
+    h2 {
+        text-align: left;
+        margin-top: 40px;
+        font-size: 24px;
+        line-height: 28px;
+        color: $heading;
+        font-weight: normal;
+    } 
+}
+.signin {  
+    background-color: $bg;
+    height: 100vh;
+}
+
+@media screen and (max-width: 576px) {
+    .signin-form {
+        width: 300px;
+        height: 300px;
+    }
+}

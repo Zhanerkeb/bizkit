@@ -1,0 +1,67 @@
+@import '../../style/_colors';
+@import '../../style/_common';
+
+.menu-logo {
+    width: 100%;
+    @include flexbox(center, center);
+    height: 70px;
+}
+.logo {
+    width: 150px;
+    height: 52px;
+    img {
+        width: 100%;
+    }
+}
+.ant-layout-sider-light {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 900px;
+}
+.ant-menu-item {  
+    a {
+       height: 100%;
+        @include flexbox(flex-start, center);
+        span {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;  
+        }  
+    }  
+    img {
+        padding-right: 10px;
+    }
+    &:last-child {
+        span {
+            color: #BB1C1C;
+        }      
+    }
+}
+.ant-layout-sider {
+    max-width: 250px!important;
+    width: 250px;   
+}
+.ant-layout-header {
+    @include flexbox(space-between, center);
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: rgba(0, 123, 255, 0.41)!important;
+}
+.ant-menu-item-selected a, .ant-menu-item-selected a:hover {
+    color: #000000!important;
+}
+.ant-menu-vertical .ant-menu-item::after, .ant-menu-vertical-left .ant-menu-item::after, .ant-menu-vertical-right .ant-menu-item::after, .ant-menu-inline .ant-menu-item::after {
+    border-right: none!important;
+}
+
+@media screen and (max-width: 768px) {
+    .dashboard-sider {
+        display: none;
+        width: 0;
+    }
+    .ant-layout-sider-light {
+        height: 1200px;
+    }
+}
+
